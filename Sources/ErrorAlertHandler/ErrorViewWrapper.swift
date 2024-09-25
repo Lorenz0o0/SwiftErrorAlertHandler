@@ -16,6 +16,7 @@ internal struct ErrorViewWrapper:ViewModifier {
         content
             .environment(\.showAlert){ error in
                 self.error = error
+                self.isPresented = true
             }
             .alert(
                 "Error",
